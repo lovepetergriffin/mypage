@@ -1,0 +1,14 @@
+{
+  // Static site served from Workers assets, on zsyvoid.com and its workers.dev preview.
+  "name": "zsyvoid",
+  "compatibility_date": "2026-10-12",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    { "pattern": "zsyvoid.com", "custom_domain": true },
+    { "pattern": "www.zsyvoid.com", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "preview_urls": true
+}

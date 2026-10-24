@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design 01 · 方向与开场</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./01.css" />
+  </head>
+  <body>
+    <div class="page-grain" aria-hidden="true"></div>
+
+    <header class="board-head">
+      <p class="mono">zsyvoid — Design Direction · 01 / 方向与开场</p>
+      <h1 class="board-title">暗黑<em>电影感</em></h1>
+      <p class="board-lede">
+        近黑的底色、超大衬线标题、细颗粒噪点，再加一点香槟金的暖光。克制、安静，把注意力留给文字和节奏。下面是配色、字体和三种开场动画，挑一个你最喜欢的。
+      </p>
+    </header>
+
+    <section class="block">
+      <h2 class="block-title"><span class="mono">01</span>配色</h2>
+      <ul class="swatches">
+        <li style="--c: #0b0b0c"><i></i><b>Ink</b><span>#0B0B0C · 背景</span></li>
+        <li style="--c: #141416"><i></i><b>Graphite</b><span>#141416 · 面板</span></li>
+        <li style="--c: #edebe6"><i></i><b>Bone</b><span>#EDEBE6 · 正文</span></li>
+        <li style="--c: #8a8780"><i></i><b>Ash</b><span>#8A8780 · 次要</span></li>
+        <li style="--c: #e8d9b5"><i></i><b>Champagne</b><span>#E8D9B5 · 强调</span></li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title"><span class="mono">02</span>字体</h2>
+      <div class="type">
+        <div class="type-row">
+          <span class="mono">Display · Instrument Serif</span>
+          <p class="t-display">Quiet, <em>useful</em> things.</p>
+        </div>
+        <div class="type-row">
+          <span class="mono">中文 · 思源宋体 Light</span>
+          <p class="t-cn">把重复交给程序，把时间留给好奇心。</p>
+        </div>
+        <div class="type-row">
+          <span class="mono">Body · Inter</span>
+          <p class="t-body">SeanRadar 每天早上 8 点前更新：AI Coding 动态、GitHub 热门项目、值得一试的工具。</p>
+        </div>
+        <div class="type-row">
+          <span class="mono">Label · JetBrains Mono</span>
+          <p class="mono t-label">Index — 01 / Work · Notes · Contact</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title"><span class="mono">03</span>开场动画</h2>
+      <p class="block-note">每个预览滚动到视口时自动播放一次。点「全屏看」能看到真实尺寸的效果，按 Esc 退出。</p>
+
+      <div class="variants">
+        <article class="variant" data-variant="a">
+          <div class="stage-slot"></div>
+          <div class="variant-info">
+            <span class="variant-letter">A</span>
+            <div>
+              <h3>计数揭幕</h3>
+              <p>右下角大号数字 000 → 100，节奏像真实加载一样有停顿；底部细线同步走完后，整块幕布向上收起，标题逐行升起。</p>
+            </div>
+            <div class="variant-actions">
+              <button type="button" data-act="replay">重播</button>
+              <button type="button" data-act="full">全屏看</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="variant" data-variant="b">
+          <div class="stage-slot"></div>
+          <div class="variant-info">
+            <span class="variant-letter">B</span>
+            <div>
+              <h3>名字揭幕</h3>
+              <p>「zsyvoid」逐字从遮罩里升起，金色细线展开。字母依次退场后，上下两扇幕布对开，画面从微微放大中落定。</p>
+            </div>
+            <div class="variant-actions">
+              <button type="button" data-act="replay">重播</button>
+              <button type="button" data-act="full">全屏看</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="variant" data-variant="c">
+          <div class="stage-slot"></div>
+          <div class="variant-info">
+            <span class="variant-letter">C</span>
+            <div>
+              <h3>光圈镜头</h3>
+              <p>一道发光金线从中心划开，撑成一扇取景窗，四角有裁切标记；窗口再推到全屏，镜头同时从 1.3 倍拉回，像电影开场。</p>
+            </div>
+            <div class="variant-actions">
+              <button type="button" data-act="replay">重播</button>
+              <button type="button" data-act="full">全屏看</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="board-foot">
+      <p class="mono">Next → 选定开场后，搭建正式首屏，并接上平滑滚动</p>
+    </footer>
+
+    <template id="stage-tpl">
+      <div class="stage">
+        <div class="hero">
+          <div class="hero-inner">
+            <div class="h-glow"></div>
+            <nav class="h-nav">
+              <span class="h-brand">zsyvoid</span>
+              <span class="h-links"><i>Work</i><i>About</i><i>Notes</i><i>Contact</i></span>
+            </nav>
+            <div class="h-main">
+              <p class="h-eyebrow mono">Sean — Independent builder</p>
+              <h1 class="h-title">
+                <span class="line"><span class="li">Building quiet,</span></span>
+                <span class="line"><span class="li"><em>useful</em> things.</span></span>
+              </h1>
+              <p class="h-cn">把重复交给程序，把时间留给好奇心。</p>
+            </div>
+            <div class="h-foot mono">
+              <span>Scroll</span>
+              <span class="h-bar"></span>
+              <span>© 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="loader"></div>
+        <div class="grain"></div>
+      </div>
+    </template>
+
+    <script type="module" src="./01.js"></script>
+  </body>
+</html>
